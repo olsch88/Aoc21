@@ -31,23 +31,19 @@ class Line():
         Gibt eine Liste mit allen Punkten aus, die von der Linie bedeckt werden
         '''
         elements = []
-        dir_x = 1 if self.p2.x > self.p1.x else -1 
-        dir_y = 1 if self.p2.y > self.p1.y else -1
+        dir_x = np.sign(self.p2.x - self.p1.x)
+        dir_y = np.sign(self.p2.y - self.p1.y)
+        direction = np.array([dir_x, dir_y])
         
-        if not self.is_straight(): # computing diagonal points
-            for a, i in enumerate(range(self.p1.y, self.p2.y+dir_y, dir_y)):
-                for b, j in enumerate(range(self.p1.x, self.p2.x+dir_x, dir_x)):
-                    if a==b:
-                        elements.append(Point(j, i))
-            return elements
-        if (self.p1.x == self.p2.x):
-            for i in range(self.p1.y, self.p2.y+dir_y, dir_y):
-                elements.append(Point(self.p1.x, i))
-            return elements
-        if (self.p1.y == self.p2.y):
-            for i in range(self.p1.x, self.p2.x+dir_x, dir_x):
-                elements.append(Point(i, self.p1.y))
-            return elements
+        start = np.array([self.p1.x, self.p1.y])
+        end = np.array([self.p2.x, self.p2.y])
+        
+        pos = start
+        while not np.all(pos==end):
+            elements.append(Point(pos[0], pos[1]))
+            pos = pos + direction
+        elements.append(Point(end[0], end[1]))
+        return elements
 
 
 ### tackling the problems
