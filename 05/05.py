@@ -70,8 +70,7 @@ print("Part 1: ")
 print(np.sum(np.where(grid>=2, 1,0)))
 print("-----------------------\n")
 
-
-
+# Solving part 2
 grid = np.zeros((1000,1000))
 # print(grid)
 for line in lines:
