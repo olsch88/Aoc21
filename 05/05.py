@@ -65,9 +65,9 @@ for line in lines:
         for pnt in line.contains():
             grid[pnt.y, pnt.x] +=1
 # print(grid)
-counter_grid = np.where(grid>=2, 1,0)
+# counter_grid = np.where(grid>=2, 1,0)
 print("Part 1: ")
-print(np.sum(counter_grid))
+print(np.sum(np.where(grid>=2, 1,0)))
 print("-----------------------\n")
 
 
@@ -78,7 +78,7 @@ for line in lines:
     for pnt in line.contains():
         grid[pnt.y, pnt.x] +=1
 # print(grid)
-counter_grid = np.where(grid>=2, 1,0)
+# counter_grid = np.where(grid>=2, 1,0)
 print("Part 2: ")
-print(np.sum(counter_grid))
+print(np.sum(np.where(grid>=2, 1,0)))
 print("-----------------------\n")
