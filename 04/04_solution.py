@@ -63,7 +63,7 @@ for n in numbers_drawn:
         if check_bingo(bingo):
             print(n)
             has_won[i] = True
-            #stop=True
+            #stop=True # Uncomment these two lines for part 1
             #break        
     bingos = new_bingos
 print(has_won)
