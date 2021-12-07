@@ -20,14 +20,14 @@ def gauss_sum(n: int)-> int:
 
 min_fuel_cost = 99999999999
 optimal_pos = 0
-for i in range(max(data)):
+for i in range(int(np.mean(data))-100, int(np.mean(data))+100): # The range is just a guess
     fuel_cost = 0
     for crab in data:
         fuel_cost += gauss_sum(np.abs(crab-i))
     if fuel_cost <= min_fuel_cost:
         min_fuel_cost = fuel_cost
         optimal_pos = i
-    if fuel_cost > min_fuel_cost:
+    if fuel_cost > min_fuel_cost:  # if the cost rises, we passt the spot
         break
 
 print("Solution Part 2:")
