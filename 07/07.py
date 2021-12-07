@@ -27,7 +27,7 @@ for i in range(int(midlle)-100, int(middle)+100): # The range is just a guess
     if fuel_cost <= min_fuel_cost:
         min_fuel_cost = fuel_cost
         optimal_pos = i
-    if fuel_cost > min_fuel_cost:  # if the cost rises, we passt the spot
+    if fuel_cost > min_fuel_cost:  # if the cost rises, we passed the spot
         break
 
 print("Solution Part 2:")
