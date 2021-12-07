@@ -20,7 +20,7 @@ def gauss_sum(n: int)-> int:
 
 min_fuel_cost = 99999999999
 optimal_pos = 0
-for i in range(int(np.mean(data))-100, int(np.mean(data))+100): # The range is just a guess
+for i in range(int(midlle)-100, int(middle)+100): # The range is just a guess
     fuel_cost = 0
     for crab in data:
         fuel_cost += gauss_sum(np.abs(crab-i))
