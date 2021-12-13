@@ -54,3 +54,6 @@ for f in folds:
 folded_grid = np.where(folded_grid>0, 1, 0)
 print("Solution Part 2:")
 print(folded_grid)
+plt.imshow(folded_grid)
+plt.show()
+
