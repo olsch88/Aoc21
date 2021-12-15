@@ -62,7 +62,7 @@ print(c)
 
 
 ######### Part 2 with new Method##########
-# We need to counters
+# We need two counters
 # 1 Counts the absolute count for every character
 # 2 counts each Letter-Pairs
 # For every step a new Counter of Letter-Pairs is generated based on the rules
