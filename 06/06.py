@@ -4,6 +4,7 @@ with open("06_input.txt", "r") as source:
     input = source.readline()
 
 start_sample = [3, 4, 3, 1, 2]  # this is  a comment
+# this is just another line
 
 
 def create_counter_list(init_list: List[int]) -> List[int]:
