@@ -3,13 +3,15 @@ from typing import List
 with open("06_input.txt", "r") as source:
     input = source.readline()
 
-start_sample = [3,4,3,1,2]
+start_sample = [3, 4, 3, 1, 2]  # this is  a comment
+
 
 def create_counter_list(init_list: List[int]) -> List[int]:
     counter_list = [0]*9
     for i in init_list:
-        counter_list[i]+=1
+        counter_list[i] += 1
     return counter_list
+
 
 def process_counter_list(current_day: List[int]) -> List[int]:
     next_day = [0]*9
@@ -20,6 +22,7 @@ def process_counter_list(current_day: List[int]) -> List[int]:
         else:
             next_day[index-1] += count
     return next_day
+
 
 fish_list = [int(x) for x in input.split(",")]
 fish_counter_list = create_counter_list(fish_list)
